@@ -59,7 +59,7 @@ my %WriteMakefileArgs = (
     'XML::LibXML::XPathContext' => '0',
     'aliased' => '0'
   },
-  'VERSION' => '0.003',
+  'VERSION' => '0.004',
   'test' => {
     'TESTS' => 't/*.t'
   }
