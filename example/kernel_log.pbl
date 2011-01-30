@@ -1,0 +1,64 @@
+P::Regex->match(
+    has => [qw/date_str host module pid message /],
+    regex => qr/^(\w+ \d+ \d+:\d+:\d+) (\w+) (\w+)\[(\d+)\]: (.+)/,
+)
+| pprogress { message => sub { "lines, e.g. for date (" . $_->date_str . ")" } }
+| oadd { something => 1 }
+| ogroup_count { module => "count" }
+
+# Sep 19 15:32:57 McJpL newsyslog[5592]: logfile turned over due to size>1000K
+# Sep 19 16:36:44 McJpL kernel[0]: hibernate image path: /var/vm/sleepimage
+# Sep 19 16:36:44 McJpL kernel[0]: sizeof(IOHibernateImageHeader) == 512
+# Sep 19 16:36:44 McJpL kernel[0]: Opened file /var/vm/sleepimage, size 4294967296, partition base 0xc805000, maxio 400000
+# Sep 19 16:36:44 McJpL kernel[0]: hibernate image major 14, minor 2, blocksize 512, pollers 5
+# Sep 19 16:36:44 McJpL kernel[0]: hibernate_alloc_pages flags 00000000, gobbling 0 pages
+# Sep 19 16:36:45 McJpL kernel[0]: NVEthernet::setLinkStatus - Valid but not Active
+# Sep 19 16:36:46 McJpL kernel[0]: System SafeSleep
+# Sep 19 16:57:09 McJpL kernel[0]: hibernate_page_list_setall start
+# Sep 19 16:57:09 McJpL kernel[0]: hibernate_page_list_setall time: 343 ms
+# Sep 19 16:57:09 McJpL kernel[0]: pages 958342, wire 105827, act 372759, inact 16729, spec 7, zf 1877, throt 0, could discard act 196460 inact 198026 purgeable 4777 spec 61880
+# Sep 19 16:57:09 McJpL kernel[0]: hibernate_page_list_setall found pageCount 497199
+# Sep 19 16:57:09 McJpL kernel[0]: IOHibernatePollerOpen, ml_get_interrupts_enabled 0
+# Sep 19 16:57:09 McJpL kernel[0]: IOHibernatePollerOpen(0)
+# Sep 19 16:57:09 McJpL kernel[0]: writing 496011 pages
+# Sep 19 16:57:09 McJpL kernel[0]: image1Size 174834176
+# Sep 19 16:57:09 McJpL kernel[0]: PMStats: Hibernate write took 21669 ms
+# Sep 19 16:57:09 McJpL kernel[0]: all time: 21669 ms, comp time: 3167 ms, deco time: 0 ms, 
+# Sep 19 16:57:09 McJpL kernel[0]: image 991411712, uncompressed 2031960064 (496084), compressed 987193680 (48%), sum1 4e8062c0, sum2 c606aca2
+# Sep 19 16:57:09 McJpL kernel[0]: hibernate_write_image done(0)
+# Sep 19 16:57:09 McJpL kernel[0]: sleep
+# Sep 19 16:57:09 McJpL kernel[0]: Wake reason = EC LID0
+# Sep 19 16:57:09 McJpL kernel[0]: System Wake
+# Sep 19 16:57:09 McJpL kernel[0]: Previous Sleep Cause: 5
+# Sep 19 16:57:09 McJpL kernel[0]: AirPort: Link Down on en1. Reason 4 (Disassociated due to inactivity).
+# Sep 19 16:57:11 McJpL kernel[0]: NVEthernet::setLinkStatus - Valid but not Active
+# Sep 19 16:57:12 McJpL kernel[0]: en1: 802.11d country code set to 'GB'.
+# Sep 19 16:57:12 McJpL kernel[0]: en1: Supported channels 1 2 3 4 5 6 7 8 9 10 11 12 13 36 40 44 48 52 56 60 64 100 104 108 112 116 120 124 128 132 136 140
+# Sep 19 16:57:13 McJpL kernel[0]: Auth result for: 00:16:01:f4:b7:ca MAC AUTH succeeded
+# Sep 19 16:57:13 McJpL kernel[0]: AirPort: Link Up on en1
+# Sep 19 16:57:13 McJpL kernel[0]: AirPort: RSN handshake complete on en1
+# Sep 19 16:57:23 McJpL kernel[0]: hibernate image path: /var/vm/sleepimage
+# Sep 19 16:57:23 McJpL kernel[0]: sizeof(IOHibernateImageHeader) == 512
+# Sep 19 16:57:23 McJpL kernel[0]: Opened file /var/vm/sleepimage, size 4294967296, partition base 0xc805000, maxio 400000
+# Sep 19 16:57:23 McJpL kernel[0]: hibernate image major 14, minor 2, blocksize 512, pollers 5
+# Sep 19 16:57:23 McJpL kernel[0]: hibernate_alloc_pages flags 00000000, gobbling 0 pages
+# Sep 19 16:57:26 McJpL kernel[0]: NVEthernet::setLinkStatus - Valid but not Active
+# Sep 19 16:57:27 McJpL kernel[0]: System SafeSleep
+# Sep 19 16:57:29 McJpL kernel[0]: hibernate_page_list_setall start
+# Sep 19 16:57:29 McJpL kernel[0]: hibernate_page_list_setall time: 332 ms
+# Sep 19 16:57:29 McJpL kernel[0]: pages 955355, wire 106376, act 369509, inact 17818, spec 4, zf 2728, throt 0, could discard act 198009 inact 198196 purgeable 6935 spec 55780
+# Sep 19 16:57:29 McJpL kernel[0]: hibernate_page_list_setall found pageCount 496435
+# Sep 19 16:57:29 McJpL kernel[0]: IOHibernatePollerOpen, ml_get_interrupts_enabled 0
+# Sep 19 16:57:29 McJpL kernel[0]: IOHibernatePollerOpen(0)
+# Sep 19 16:57:29 McJpL kernel[0]: writing 495236 pages
+# Sep 19 16:57:29 McJpL kernel[0]: IOPolledInterface::checkForWork[5] 0xe00002eb
+# Sep 19 16:57:29 McJpL kernel[0]: PMStats: Hibernate write took 3 ms
+# Sep 19 16:57:29 McJpL kernel[0]: all time: 3 ms, comp time: 0 ms, deco time: 0 ms, 
+# Sep 19 16:57:29 McJpL kernel[0]: image 0, uncompressed 98304 (24), compressed 26720 (27%), sum1 2adfe720, sum2 0
+# Sep 19 16:57:29 McJpL kernel[0]: hibernate_write_image done(e00002eb)
+# Sep 19 16:57:29 McJpL kernel[0]: sleep
+# Sep 19 16:57:29 McJpL kernel[0]: Wake reason = EC LID0
+# Sep 19 16:57:29 McJpL kernel[0]: System Wake
+# Sep 19 16:57:29 McJpL kernel[0]: Previous Sleep Cause: 5
+# Sep 19 16:57:29 McJpL kernel[0]: AirPort: Link Down on en1. Reason 4 (Disassociated due to inactivity).
+# Sep 19 16:57:29 McJpL kernel[0]: en1: 802.11d country code set to 'X3'.

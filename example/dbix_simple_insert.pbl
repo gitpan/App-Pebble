@@ -1,0 +1,9 @@
+  P::Regex->split( has => { cpu_user => 7, cpu_sys => 8, cpu_idle => 9 } )
+| R::DB->connect( "dbi:SQLite:dbname=test/iostat.sqlite" )
+| R::DB->insert(
+    connect => "dbi:SQLite:dbname=test/iostat.sqlite",
+    table   => "cpu",
+    columns => [qw/ cpu_user cpu_sys /],
+  )
+
+

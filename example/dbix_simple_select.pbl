@@ -1,0 +1,4 @@
+  P::DB->query(
+    connect => "dbi:SQLite:dbname=test/iostat.sqlite",
+    sql     => "select cpu_user, cpu_sys from cpu where cpu_user > 5",
+  )
