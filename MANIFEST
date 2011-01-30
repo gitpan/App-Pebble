@@ -52,6 +52,7 @@ t/release-pod-syntax.t
 temp/kernel.log
 temp/kernel.out
 temp/out.txt
+weaver.ini
 x
 y
 z
