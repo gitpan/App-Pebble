@@ -1,0 +1,112 @@
+2011-01-31T23:40:19		
+2011-01-31T23:41:06		
+2011-01-31T23:41:37		
+2011-01-31T23:42:40	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-01-31T23:46:13	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-01-31T23:50:01	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-01-31T23:50:01	info	(((\*STDIN |
+pmap { chomp; $_ } |
+P::Regex->match( regex => qr/Date:   (\d+-\d+-\d+)/, has => "date" )
+| pprogress { message => sub { "Date: " . $_->date } }
+| o { $_->date( S::DateTime->parse( $_->date ) ) }
+| ogroup_count { date => "commit_count" }
+| osort { "date" }
+| R::Chart::Time->render({
+    x     => "date",
+    y     => "commit_count",
+    y_min => 0,
+    file  => "example/git_log_activity.png",
+}) |
+\*STDOUT)))
+2011-01-31T23:50:10	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-01-31T23:50:10	info	(((\*STDIN |
+pmap { chomp; $_ } |
+P::Regex->match( regex => qr/Date:   (\d+-\d+-\d+)/, has => "date" )
+| pprogress { message => sub { "Date: " . $_->date } }
+| o { $_->date( S::DateTime->parse( $_->date ) ) }
+| ogroup_count { date => "commit_count" }
+| osort { "date" }
+| R::Chart::Time->render({
+    x     => "date",
+    y     => "commit_count",
+    y_min => 0,
+    file  => "example/git_log_activity.png",
+}) |
+\*STDOUT)))
+2011-01-31T23:50:37	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-01-31T23:50:37	info	(((\*STDIN |
+pmap { chomp; $_ } |
+P::Regex->match( regex => qr/Date:   (\d+-\d+-\d+)/, has => "date" )
+| pprogress { message => sub { "Date: " . $_->date } }
+| o { $_->date( S::DateTime->parse( $_->date ) ) }
+| ogroup_count { date => "commit_count" }
+| osort { "date" }
+| R::Chart::Time->render({
+    x     => "date",
+    y     => "commit_count",
+    y_min => 0,
+    file  => "example/git_log_activity.png",
+}) |
+\*STDOUT)))
+2011-01-31T23:50:57	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-01-31T23:50:57	info	(((\*STDIN |
+pmap { chomp; $_ } |
+P::Regex->match( regex => qr/Date:   (\d+-\d+-\d+)/, has => "date" )
+| pprogress { message => sub { "Date: " . $_->date } }
+| o { $_->date( S::DateTime->parse( $_->date ) ) }
+| ogroup_count { date => "commit_count" }
+| osort { "date" }
+| R::Chart::Time->render({
+    x     => "date",
+    y     => "commit_count",
+    y_min => 0,
+    file  => "example/git_log_activity.png",
+}) |
+\*STDOUT)))
+2011-02-01T00:01:44	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-02-01T00:01:44	info	(((\*STDIN |
+pmap { chomp; $_ } |
+P::Regex->match( regex => qr/Date:   (\d+-\d+-\d+)/, has => "date" )
+| pprogress { message => sub { "Date: " . $_->date } }
+| o { $_->date( S::DateTime->parse( $_->date ) ) }
+| ogroup_count { date => "commit_count" }
+| osort { "date" }
+| R::Chart::Time->render({
+    x     => "date",
+    y     => "commit_count",
+    y_min => 0,
+    file  => "example/git_log_activity.png",
+}) |
+\*STDOUT)))
+2011-02-01T00:02:50	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-02-01T00:02:50	info	(((\*STDIN |
+pmap { chomp; $_ } |
+P::Regex->match( regex => qr/Date:   (\d+-\d+-\d+)/, has => "date" )
+| pprogress { message => sub { "Date: " . $_->date } }
+| o { $_->date( S::DateTime->parse( $_->date ) ) }
+| ogroup_count { date => "commit_count" }
+| osort { "date" }
+| R::Chart::Time->render({
+    x     => "date",
+    y     => "commit_count",
+    y_min => 0,
+    file  => "example/git_log_activity.png",
+}) |
+\*STDOUT)))
+2011-02-01T00:03:11	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-02-01T00:03:11	info	(((\*STDIN |
+pmap { chomp; $_ } |
+P::Regex->match( regex => qr/Date:   (\d+-\d+-\d+)/, has => "date" )
+| pprogress { message => sub { "Date: " . $_->date } }
+| o { $_->date( S::DateTime->parse( $_->date ) ) }
+| ogroup_count { date => "commit_count" }
+| osort { "date" }
+| R::Chart::Time->render({
+    x     => "date",
+    y     => "commit_count",
+    y_min => 0,
+    file  => "example/git_log_activity.png",
+}) |
+\*STDOUT)))
+2011-02-01T00:03:31	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)
+2011-02-01T00:03:37	info	Cache dir (/Users/johanl/Library/Application Support/Perl/dist/App-Pebble/web)

@@ -44,13 +44,16 @@ my %WriteMakefileArgs = (
     'Format::Human::Bytes' => '0',
     'Getopt::Long' => '0',
     'IO::Pipeline' => '0',
-    'JSON::XS' => '0',
     'LWP::UserAgent::WithCache' => '0',
     'List::MoreUtils' => '0',
     'List::Util' => '0',
+    'Log::Dispatch' => '0',
+    'Log::Dispatch::File' => '0',
+    'Log::Dispatch::Screen' => '0',
     'Method::Signatures' => '0',
     'Moose' => '0',
     'MooseX::ClassAttribute' => '0',
+    'Path::Class' => '0',
     'Pebble::Object::Class' => '0',
     'Statistics::Descriptive' => '0',
     'Text::CSV_XS' => '0',
@@ -59,7 +62,7 @@ my %WriteMakefileArgs = (
     'XML::LibXML::XPathContext' => '0',
     'aliased' => '0'
   },
-  'VERSION' => '0.007',
+  'VERSION' => '0.008',
   'test' => {
     'TESTS' => 't/*.t'
   }

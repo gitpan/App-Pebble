@@ -29,14 +29,17 @@ lib/App/Pebble/Command/df.pm
 lib/App/Pebble/Command/du.pm
 lib/App/Pebble/Helpers/DateTime.pm
 lib/App/Pebble/Helpers/DateTime/Duration.pm
+lib/App/Pebble/Log.pm
 lib/App/Pebble/Modifier/Object.pm
 lib/App/Pebble/Modifier/Pipeline.pm
 lib/App/Pebble/Parser.pm
 lib/App/Pebble/Plugin/Parser.pm
+lib/App/Pebble/Plugin/Parser/CSV.pm
 lib/App/Pebble/Plugin/Parser/Regex.pm
 lib/App/Pebble/Plugin/Renderer.pm
 lib/App/Pebble/Plugin/Renderer/CSV.pm
 lib/App/Pebble/Plugin/Renderer/Chart/Time.pm
+lib/App/Pebble/Plugin/Renderer/SQL.pm
 lib/App/Pebble/Plugin/Renderer/table.pm
 lib/App/Pebble/Plugin/Source.pm
 lib/App/Pebble/Plugin/Source/DateTime.pm
@@ -52,6 +55,7 @@ t/release-pod-syntax.t
 temp/kernel.log
 temp/kernel.out
 temp/out.txt
+temp/pebble.log
 weaver.ini
 x
 y
